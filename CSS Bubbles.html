@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.etherdream.com/funnyscript/bubbles/ -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<title>CSS Bubbles</title>
+	<style>
+		html,
+		body {
+			border: none;
+			overflow: hidden;
+			height: 100%;
+		}
+
+		body {
+			background: url(http://www.etherdream.com/funnyscript/bubbles/BG.jpg) bottom
+		}
+
+		body>div {
+			border-radius: 50%;
+			background: url('item5.png') no-repeat center center !important;
+		}
+
+		div {
+			background-size: 100% 100%
+		}
+	</style>
+</head>
+
+<body onload="Demo()">
+	<script src="./CSS Bubbles_files/Bubbles.js"></script>
+	<script>
+		var MAX = 5;
+		var i = 0;
+
+		function Demo() {
+			CreateBubble({
+				index: i
+			});
+
+			if (++i < MAX)
+				setTimeout(Demo, 1000);
+		}
+	</script>
+</body>
+
+</html>
